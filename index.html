@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sample Call</title>
+</head>
+<body>
+    <form method="POST" action="http://localhost:3001/convert"> <!--modify to match api endpoint as needed-->
+        <legend>From currency</legend>
+        <select id="fromCurrency" name="fromCurrency">
+            <option value="dollars">Dollars</option>
+            <option value="yen">Yen</option>
+            <option value="pounds">Pounds</option>
+            <option value="euros">Euros</option>
+        </select>
+        <legend>To currency</legend>
+        <select id="toCurrency" name="toCurrency">
+            <option value="dollars">Dollars</option>
+            <option value="yen">Yen</option>
+            <option value="pounds">Pounds</option>
+            <option value="euros">Euros</option>
+        </select>
+        <button type="submit">Click here</button>
+    </form>
+</body>
+</html>
