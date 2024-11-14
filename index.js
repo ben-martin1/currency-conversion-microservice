@@ -1,20 +1,20 @@
-const express = require('express');
-const cors = require('cors');
+const cors = require("cors");
+const express = require("express");
 
 const app = express();
 const port = 3001;
 const endpointURL = "/convert"; //modify to change API endpoint
 
-app.use(express.json());
 app.use(cors({
-    origin: 'http://localhost:5500' //modify to whatever URL index.html is running on, if using liveserver
+    origin: 'http://localhost:5500',   // modify to whatever URL index.html is running on, if using liveserver
 }));
 
-app.use(express.urlencoded({ extended: true })); //parses form data 
+app.use(express.json());
+app.use(express.urlencoded({ extended: true })); //parses form data  
 
 app.post(endpointURL, (req, res) => {
-    const fromCurrency = req.body.fromCurrency;
-    const toCurrency = req.body.toCurrency;
+    const fromCurrency = req.body.FromCurrency;
+    const toCurrency = req.body.ToCurrency;
     if (!fromCurrency){
         return res.status(400).send('missing fromCurrency');
     }
@@ -30,7 +30,7 @@ app.post(endpointURL, (req, res) => {
     };
 
     const ratio = conversion[fromCurrency][toCurrency]; 
-    console.log(ratio);
+    console.log(`Conversion of ${fromCurrency} to ${toCurrency}: ${ratio}`);
     res.json(ratio);
 });
 
