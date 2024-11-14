@@ -91,6 +91,9 @@ app.listen(port, () => {
 # Recieving Data
 From the call, you can see the data will be printed and returned into a variable `delta`. If invalid to/from currencies are sent, the response will be an error.
 
+# Sequence Diagram
+![Sequence Diagram](https://i.ibb.co/Yc2HwYG/sequence-diagram.png)
+
 # Commincation Contract
 1) Communicate through Discord.
 2) Teammates try to respond within 24 hours to direct messages, and after that follow-ups can be allowed.
