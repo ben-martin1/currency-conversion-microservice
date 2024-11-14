@@ -1,17 +1,13 @@
-to run, install express and cors:
+To run, install express and cors:
 
 npm install express
 
 npm install cors (possible to skip if just opening index.html)
 
-then run index.js:
+Then run index.js:
 
 npm run index.js
 
-then test it, you have two choices:
-
-   1) run index.html on the specified host as defined by origin in app.use(cors)
+Then to test it, run index.html on the specified host as defined by origin in app.use(cors)
     
-   2) just open index.html
-
-if you just want to test the sample call just by opening index.html, you likely don't need cors, but i was running into issues without it while making api calls from a react-hosted app
+The request will print in the terminal running index.js, and the output will log in the web browser making the call. It will also be returned by the script calling the API.
